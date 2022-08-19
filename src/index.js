@@ -1,7 +1,21 @@
-import{saludar} from './js/funciones.js'
-import './styles.css';
+// import { init } from "./js/chistes-page";
+// import { obtenerUsuarios } from "./js/http-provider";
+// import { init } from "./js/usuarios-page";
+import * as CRUD from './js/crud-provider';
 
+// obtenerUsuarios().then(console.log);
+// init();
 
-const nombre = 'Lucio';
+CRUD.getUsuario(2).then(console.log);
 
-saludar(nombre);
+CRUD.crearUsuario({
+    name: 'Lucio',
+    job: 'Serrador',
+}).then(console.log);
+
+CRUD.actualizarUsuario(1,{
+    name:'Lara',
+    job:'Carpintera'
+}).then(console.log);
+
+CRUD.borrarUsuario(1).then(console.log);
