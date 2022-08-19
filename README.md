@@ -2,7 +2,7 @@
 
 Proyecto inicial para crear aplicaciones con webpack
 
-### Notas:
+### Notas importantes:
 Recuerda construir los modulos de Node:
 npm install
 
